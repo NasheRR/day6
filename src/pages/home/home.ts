@@ -13,6 +13,7 @@ export class HomePage implements OnInit{
 
   items: Book[];
   public suscription: Subscription;
+  isLoading: boolean = true;
 
   constructor(public navCtrl: NavController,
     public bookS: BooksProvider) {
@@ -23,7 +24,7 @@ export class HomePage implements OnInit{
     this.suscription = this.bookS.getBooks().subscribe((data: Book[])=>{
       this.items = data;
       console.log(data);
-
+      this.isLoading = false;
     },(error)=>{
         console.log(error);
     });

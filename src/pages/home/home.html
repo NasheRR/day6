@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="primary">
     <ion-title>
       Books list
     </ion-title>
@@ -9,7 +9,7 @@
 <ion-content padding>
   <!--Spinner carga-->
   <div text-center>
-    <ion-spinner>
+    <ion-spinner *ngIf="isLoading">
 
     </ion-spinner>
   </div>
