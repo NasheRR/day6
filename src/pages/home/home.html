@@ -22,7 +22,7 @@
   </div>-->
   <!--Listado de libros-->
   <div>
-    <ion-list *ngFor="let b of items">
+    <ion-list *ngFor="let b of items" (click)="navWithBook(b)">
       <button ion-item>
         <div>{{b.title}}</div>
         <div>{{b.language}}</div>

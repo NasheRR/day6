@@ -32,7 +32,12 @@ export class HomePage implements OnInit{
   }
 
   nav(){
-    this.navCtrl.push(BookDetailsPage, {book: this.items});
+    this.navCtrl.push(BookDetailsPage);
+  }
+
+  navWithBook(b: Book){
+    console.log(b);
+    this.navCtrl.push(BookDetailsPage, {book: b});
   }
 
 }
