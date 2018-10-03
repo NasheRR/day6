@@ -28,7 +28,7 @@ export class BookDetailsPage implements OnInit {
         edition: ['', Validators.required],
         publisher: ['', Validators.required]
       });
-        this.book = this.navParam.get('item');
+        this.book = this.navParam.get('book');
       
       if (this.book){
           this.form.patchValue(this.book);

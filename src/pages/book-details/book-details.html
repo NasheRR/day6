@@ -33,7 +33,9 @@
       <ion-fab bottom right *ngIf="!submitting">
           <button ion-fab><ion-icon name="md-checkmark"></ion-icon></button>
       </ion-fab>
-      <button ion-fab *ngIf="book"><ion-icon name="trash"></ion-icon></button>
+      <ion-fab bottom right>
+        <button ion-fab *ngIf="book" color="danger"><ion-icon name="trash"></ion-icon></button>
+      </ion-fab>
     </div>
   </form>
 
