@@ -12,6 +12,7 @@ import {BookDetailsPage} from "../book-details/book-details";
 })
 export class HomePage implements OnInit{
 
+  error: boolean = false;
   items: Book[];
   public suscription: Subscription;
   isLoading: boolean = true;
@@ -22,12 +23,18 @@ export class HomePage implements OnInit{
   }
 
   ngOnInit(){
+    this.startArray()
+  }
+
+  startArray(){
+    this.error = false;
     this.suscription = this.bookS.getBooks().subscribe((data: Book[])=>{
       this.items = data;
       console.log(data);
       this.isLoading = false;
     },(error)=>{
-        console.log(error);
+      this.error = true;
+      console.log(error);
     });
   }
 
