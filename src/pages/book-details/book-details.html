@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Book Details
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <form [formGroup]="form" (submit)="formSubmitted()">
+    <ion-item>
+      <ion-label>Title</ion-label>
+      <ion-input type="text" formControlName="title"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Languaje</ion-label>
+      <ion-select formControlName="language">
+        <ion-option value="Java">Java</ion-option>
+        <ion-option value="Javascript">Javascript</ion-option>
+        <ion-option value="C++">C++</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Edition</ion-label>
+      <ion-input type="text" formControlName="edition"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Publisher</ion-label>
+      <ion-input type="text" formControlName="publisher"></ion-input>
+    </ion-item>
+    <div margin-top text-end>
+      <button ion-fab end><ion-icon name="md-checkmark"></ion-icon></button>
+      <button ion-fab *ngIf="book"><ion-icon name="trash"></ion-icon></button>
+    </div>
+  </form>
+
+</ion-content>
