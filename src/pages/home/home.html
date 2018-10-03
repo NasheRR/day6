@@ -1,14 +1,36 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Books list
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <!--Spinner carga-->
+  <div text-center>
+    <ion-spinner>
+
+    </ion-spinner>
+  </div>
+  <!--Error de conexion y boton de recarga-->
+  <div padding-top padding-bottom text-center >
+    Error de conexion.
+    <div padding-top>
+        <button ion-button >Reintentar</button>
+    </div>
+  </div>
+  <!--Listado de libros-->
+  <div>
+    <ion-list>
+      <button ion-item>
+
+      </button>
+    </ion-list>
+  </div>
+  <!---->
+  <ion-fab button-right>
+    
+  </ion-fab>
+
 </ion-content>
