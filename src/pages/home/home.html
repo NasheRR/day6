@@ -9,15 +9,17 @@
 <ion-content padding>
   <!--Spinner carga-->
   <div text-center>
-    <ion-spinner *ngIf="isLoading">
+    <div *ngIf="isLoading">
+    <ion-spinner>
 
     </ion-spinner>
   </div>
-  <div padding-top padding-bottom text-center >
+  <div *ngIf="error" padding-top padding-bottom text-center >
     Error de conexion.
     <div padding-top>
-        <button ion-button >Reintentar</button>
+        <button (click)="startArray()" ion-button >Reintentar</button>
     </div>
+  </div>
   </div>
   <!--Listado de libros-->
   <div>
