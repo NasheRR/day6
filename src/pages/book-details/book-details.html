@@ -30,8 +30,8 @@
       <ion-input type="text" formControlName="publisher"></ion-input>
     </ion-item>
     <div margin-top text-end>
-      <ion-fab bottom right>
-          <button ion-fab (click)="nav()"><ion-icon name="md-checkmark"></ion-icon></button>
+      <ion-fab bottom right *ngIf="!submitting">
+          <button ion-fab><ion-icon name="md-checkmark"></ion-icon></button>
       </ion-fab>
       <button ion-fab *ngIf="book"><ion-icon name="trash"></ion-icon></button>
     </div>

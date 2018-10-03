@@ -9,6 +9,7 @@ import { HomePage } from '../pages/home/home';
 import { BooksProvider } from '../providers/books/books';
 import { HttpClientModule } from "@angular/common/http";
 import { BookDetailsPage } from '../pages/book-details/book-details';
+import { MessagesService } from '../services/Messages';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { BookDetailsPage } from '../pages/book-details/book-details';
     StatusBar,
     SplashScreen,
     BooksProvider,
+    MessagesService,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
 
   ]
