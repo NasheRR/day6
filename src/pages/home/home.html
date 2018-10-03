@@ -13,24 +13,27 @@
 
     </ion-spinner>
   </div>
-  <!--Error de conexion y boton de recarga-->
+  <!--Error de conexion y boton de recarga
   <div padding-top padding-bottom text-center >
     Error de conexion.
     <div padding-top>
         <button ion-button >Reintentar</button>
     </div>
-  </div>
+  </div>-->
   <!--Listado de libros-->
   <div>
-    <ion-list>
+    <ion-list *ngFor="let b of items">
       <button ion-item>
-
+        <div>{{b.title}}</div>
+        <div>{{b.language}}</div>
       </button>
     </ion-list>
   </div>
-  <!---->
-  <ion-fab button-right>
-    
+  <!-- -->
+  <ion-fab bottom right>
+      <button ion-fab icon-only>
+        <ion-icon name="add"></ion-icon>
+      </button>
   </ion-fab>
 
 </ion-content>
