@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { BooksProvider, Book } from '../../providers/books/books';
 import { Subscription } from 'rxjs/Subscription';
+import {BookDetailsPage} from "../book-details/book-details";
 
 
 
@@ -27,6 +28,10 @@ export class HomePage implements OnInit{
     },(error)=>{
         console.log(error);
     });
+  }
+
+  nav(){
+    this.navCtrl.push(BookDetailsPage);
   }
 
 }
